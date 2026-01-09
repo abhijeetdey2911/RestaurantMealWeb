@@ -1,0 +1,280 @@
+/* Menu Page Styles */
+.menu-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-header h1 {
+    font-size: 48px;
+    color: #353535;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.menu-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Toggle Switch Section */
+.menu-toggle-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.toggle-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #353535;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4CAF50;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #ff6b35;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+/* Week Days Selector */
+.week-days-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.day-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #ffd500;
+    background-color: white;
+    color: #353535;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Nunito", sans-serif;
+}
+
+.day-btn:hover {
+    background-color: #ffd500;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 213, 0, 0.3);
+}
+
+.day-btn.active {
+    background-color: #ffd500;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 213, 0, 0.4);
+}
+
+/* Menu Display Area */
+.menu-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.meal-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.meal-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ffd500;
+}
+
+.meal-header i {
+    font-size: 28px;
+    color: #ffd500;
+}
+
+.meal-header h2 {
+    font-size: 28px;
+    color: #353535;
+    margin: 0;
+}
+
+.meal-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #FFF0DD;
+    border-radius: 12px;
+}
+
+.menu-item-icon {
+    font-size: 24px;
+    color: #4CAF50;
+    min-width: 30px;
+}
+
+.menu-item.non-veg .menu-item-icon {
+    color: #ff6b35;
+}
+
+.menu-item-content {
+    flex: 1;
+}
+
+.menu-item-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #353535;
+    margin-bottom: 5px;
+}
+
+.menu-item-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Subscribe Button */
+.subscribe-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.subscribe-btn {
+    background: #ffd500;
+    color: #000000;
+    border: 2px solid #ffd500;
+    padding: 15px 60px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.subscribe-btn:hover {
+    background-color: #ffffff;
+    color: #ffd500;
+    border: 2px solid #ffd500;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 213, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .menu-header h1 {
+        font-size: 36px;
+    }
+
+    .menu-display {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .week-days-selector {
+        gap: 8px;
+    }
+
+    .day-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .meal-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-header h1 {
+        font-size: 28px;
+    }
+
+    .menu-header p {
+        font-size: 16px;
+    }
+
+    .toggle-label {
+        font-size: 16px;
+    }
+
+    .day-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .subscribe-btn {
+        padding: 12px 40px;
+        font-size: 16px;
+    }
+}
+

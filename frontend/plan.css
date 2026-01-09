@@ -1,0 +1,341 @@
+/* Plans Page Styles */
+.plans-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.plans-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.plans-header h1 {
+    font-size: 48px;
+    color: #353535;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.plans-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Plans Grid */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: stretch;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.featured {
+    border: 3px solid #ffd500;
+    transform: scale(1.05);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #ffd500;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.plan-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    flex-shrink: 0;
+}
+
+.plan-header h2 {
+    font-size: 28px;
+    color: #353535;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.plan-price .currency {
+    font-size: 20px;
+    color: #666;
+    font-weight: 600;
+}
+
+.plan-price .amount {
+    font-size: 42px;
+    color: #353535;
+    font-weight: 700;
+}
+
+.plan-price .period {
+    font-size: 16px;
+    color: #666;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 30px;
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #353535;
+    border-bottom: 1px solid #f5f5f5;
+    min-height: 48px;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-features li i {
+    color: #4CAF50;
+    font-size: 18px;
+    min-width: 20px;
+    flex-shrink: 0;
+}
+
+.plan-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ffd500;
+    color: #000;
+    border: 2px solid #ffd500;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Nunito", sans-serif;
+    margin-top: auto;
+    flex-shrink: 0;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.plan-btn:hover {
+    background: #ffffff;
+    color: #ffd500;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 213, 0, 0.4);
+}
+
+.plan-btn.featured-btn {
+    background: #ff8c00;
+    border-color: #ff8c00;
+    color: white;
+}
+
+.plan-btn.featured-btn:hover {
+    background: #ffffff;
+    color: #ff8c00;
+    border-color: #ff8c00;
+}
+
+/* Plans Info Section */
+.plans-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.info-card {
+    background: #FFF0DD;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 40px;
+    color: #ffd500;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 22px;
+    color: #353535;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .plan-card.featured {
+        transform: scale(1);
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .plans-info {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .plans-container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .plans-header h1 {
+        font-size: 36px;
+    }
+
+    .plans-header p {
+        font-size: 16px;
+    }
+
+    .plan-card {
+        padding: 25px;
+    }
+
+    .plan-header h2 {
+        font-size: 24px;
+    }
+
+    .plan-price .amount {
+        font-size: 36px;
+    }
+
+    .plan-features li {
+        font-size: 14px;
+    }
+
+    .plan-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .plans-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plans-header h1 {
+        font-size: 28px;
+    }
+
+    .plans-header p {
+        font-size: 14px;
+    }
+
+    .plan-card {
+        padding: 20px;
+    }
+
+    .plan-badge {
+        top: -12px;
+        right: 15px;
+        padding: 6px 15px;
+        font-size: 10px;
+    }
+
+    .plan-header h2 {
+        font-size: 22px;
+    }
+
+    .plan-price .amount {
+        font-size: 32px;
+    }
+
+    .plan-price .currency {
+        font-size: 18px;
+    }
+
+    .plan-price .period {
+        font-size: 14px;
+    }
+
+    .plan-features li {
+        padding: 10px 0;
+        font-size: 13px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+    .info-card i {
+        font-size: 32px;
+    }
+
+    .info-card h3 {
+        font-size: 18px;
+    }
+
+    .info-card p {
+        font-size: 13px;
+    }
+}
+

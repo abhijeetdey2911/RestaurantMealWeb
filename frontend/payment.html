@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Evermeals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <img src="../photo/WhatsApp_Image_2025-12-19_at_2.27.11_PM-removebg-preview.png" alt="Evermeals Logo">
+        <div class="nav-bar-icon">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="plan.html">Plan</a>
+            <a href="#">AboutUs</a>
+        </div>
+        <div class="nav-bar-btn">
+            <a href="login.html">Login</a>
+            <a href="contact.html" id="btn2">Get in touch</a>
+        </div>
+    </div>
+
+    <div class="payment-container">
+        <div class="payment-header">
+            <h1>Complete Payment</h1>
+            <p>Review your order and proceed to payment</p>
+        </div>
+
+        <div class="payment-content">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2><i class="fas fa-receipt"></i> Order Summary</h2>
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span class="summary-label">Plan:</span>
+                        <span class="summary-value" id="summary-plan"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Meal Type:</span>
+                        <span class="summary-value" id="summary-meal-type"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Meal Time:</span>
+                        <span class="summary-value" id="summary-meal-time"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Duration:</span>
+                        <span class="summary-value" id="summary-duration"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Start Date:</span>
+                        <span class="summary-value" id="summary-start-date"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">End Date:</span>
+                        <span class="summary-value" id="summary-end-date"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Name:</span>
+                        <span class="summary-value" id="summary-name"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Phone:</span>
+                        <span class="summary-value" id="summary-phone"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Address:</span>
+                        <span class="summary-value" id="summary-address"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="payment-section">
+                <h2><i class="fas fa-credit-card"></i> Payment Details</h2>
+                
+                <!-- Coupon Section -->
+                <div class="coupon-section">
+                    <label for="coupon-code">Coupon Code (Optional)</label>
+                    <div class="coupon-input-group">
+                        <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                        <button type="button" id="apply-coupon" class="btn-apply">Apply</button>
+                    </div>
+                    <div id="coupon-message" class="coupon-message"></div>
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="price-breakdown">
+                    <div class="price-item">
+                        <span>Plan Price:</span>
+                        <span id="base-price">₹0</span>
+                    </div>
+                    <div class="price-item" id="discount-row" style="display: none;">
+                        <span>Discount:</span>
+                        <span id="discount-amount" class="discount">-₹0</span>
+                    </div>
+                    <div class="price-item total">
+                        <span>Total Amount:</span>
+                        <span id="total-price">₹0</span>
+                    </div>
+                </div>
+
+                <!-- Payment Button -->
+                <button id="make-payment" class="btn-payment">
+                    <i class="fas fa-lock"></i>
+                    Make Payment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>
+

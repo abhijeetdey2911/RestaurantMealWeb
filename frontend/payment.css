@@ -1,0 +1,276 @@
+/* Payment Page Styles */
+.payment-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.payment-header h1 {
+    font-size: 42px;
+    color: #353535;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.payment-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.payment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Order Summary */
+.order-summary {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    font-size: 24px;
+    color: #353535;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-summary h2 i {
+    color: #ffd500;
+}
+
+.summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    font-weight: 600;
+    color: #666;
+    font-size: 15px;
+}
+
+.summary-value {
+    color: #353535;
+    font-size: 15px;
+    text-align: right;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+/* Payment Section */
+.payment-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section h2 {
+    font-size: 24px;
+    color: #353535;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-section h2 i {
+    color: #ffd500;
+}
+
+/* Coupon Section */
+.coupon-section {
+    margin-bottom: 30px;
+}
+
+.coupon-section label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #353535;
+    margin-bottom: 10px;
+}
+
+.coupon-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.coupon-input-group input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.coupon-input-group input:focus {
+    outline: none;
+    border-color: #ffd500;
+    box-shadow: 0 0 0 3px rgba(255, 213, 0, 0.1);
+}
+
+.btn-apply {
+    padding: 12px 25px;
+    background: #ffd500;
+    color: #000;
+    border: 2px solid #ffd500;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Nunito", sans-serif;
+    white-space: nowrap;
+}
+
+.btn-apply:hover {
+    background: #ffc700;
+    transform: translateY(-2px);
+}
+
+.coupon-message {
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.coupon-message.success {
+    color: #4CAF50;
+}
+
+.coupon-message.error {
+    color: #ff6b35;
+}
+
+/* Price Breakdown */
+.price-breakdown {
+    background: #FFF0DD;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #353535;
+}
+
+.price-item.total {
+    border-top: 2px solid #ffd500;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #353535;
+}
+
+.discount {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+/* Payment Button */
+.btn-payment {
+    width: 100%;
+    padding: 18px;
+    background: #ffd500;
+    color: #000;
+    border: 2px solid #ffd500;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-payment:hover {
+    background: #ffc700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 213, 0, 0.4);
+}
+
+.btn-payment i {
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .payment-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .payment-container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .payment-header h1 {
+        font-size: 32px;
+    }
+
+    .order-summary,
+    .payment-section {
+        padding: 25px 20px;
+    }
+
+    .coupon-input-group {
+        flex-direction: column;
+    }
+
+    .btn-apply {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-header h1 {
+        font-size: 28px;
+    }
+
+    .summary-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .summary-value {
+        max-width: 100%;
+        text-align: left;
+    }
+}
+

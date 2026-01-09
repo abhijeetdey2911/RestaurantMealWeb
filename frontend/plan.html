@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans - Evermeals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <img src="../photo/WhatsApp_Image_2025-12-19_at_2.27.11_PM-removebg-preview.png" alt="Evermeals Logo">
+        <div class="nav-bar-icon">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="plan.html">Plan</a>
+            <a href="#">AboutUs</a>
+        </div>
+        <div class="nav-bar-btn">
+            <a href="login.html">Login</a>
+            <a href="contact.html" id="btn2">Get in touch</a>
+        </div>
+    </div>
+
+    <!-- Plans Section -->
+    <div class="plans-container">
+        <div class="plans-header">
+            <h1>Choose Your Plan</h1>
+            <p>Select the perfect meal plan that fits your lifestyle</p>
+        </div>
+
+        <div class="plans-grid">
+            <!-- 3-Days Plan -->
+            <div class="plan-card">
+                <div class="plan-badge">Popular</div>
+                <div class="plan-header">
+                    <h2>3-Days Plan</h2>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>
+                        <span class="amount">299</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 3 Days Subscription</li>
+                    <li><i class="fas fa-check"></i> Choose Meal Type</li>
+                    <li><i class="fas fa-check"></i> Lunch or Dinner or Both</li>
+                    <li><i class="fas fa-check"></i> Veg & Non-Veg Options</li>
+                    <li><i class="fas fa-check"></i> Home Delivery</li>
+                </ul>
+                <a href="purchase.html?plan=3days&price=299" class="plan-btn">Subscribe Now</a>
+            </div>
+
+            <!-- Monthly Plan -->
+            <div class="plan-card featured">
+                <div class="plan-badge">Best Value</div>
+                <div class="plan-header">
+                    <h2>Monthly Plan</h2>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>
+                        <span class="amount">2999</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 30 Days Subscription</li>
+                    <li><i class="fas fa-check"></i> Choose Meal Type</li>
+                    <li><i class="fas fa-check"></i> Lunch or Dinner or Both</li>
+                    <li><i class="fas fa-check"></i> Veg & Non-Veg Options</li>
+                    <li><i class="fas fa-check"></i> Home Delivery</li>
+                    <li><i class="fas fa-check"></i> Weekly Menu Variety</li>
+                </ul>
+                <a href="purchase.html?plan=monthly&price=2999" class="plan-btn featured-btn">Subscribe Now</a>
+            </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="plans-info">
+            <div class="info-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Fresh Daily</h3>
+                <p>All meals are prepared fresh daily with the finest ingredients</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-truck"></i>
+                <h3>Free Delivery</h3>
+                <p>Enjoy free home delivery on all subscription plans</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Flexible Plans</h3>
+                <p>Pause or cancel your subscription anytime you want</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
